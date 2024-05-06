@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Information</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <ul>
+        {% for user in users %}
+            <li>User ID: {{ user.user_id }}, Username: {{ user.username }}, Email: {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Icons</h1>
+    <ul>
+        {% for icon in icons %}
+            <li>Icon ID: {{ icon.icon_id }}, Name: {{ icon.name }}, Occupation: {{ icon.occupation }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Publications</h1>
+    <ul>
+        {% for publication in publications %}
+            <li>Publication ID: {{ publication.pub_id }}, Title: {{ publication.title }}, Author: {{ publication.author }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>User Interactions</h1>
+    <ul>
+        {% for interaction in user_interactions %}
+            <li>Interaction ID: {{ interaction.int_id }}, User ID: {{ interaction.user_id }}, Icon ID: {{ interaction.icon_id }}, Interaction Type: {{ interaction.interaction_type }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Search Filters</h1>
+    <ul>
+        {% for filter in search_filters %}
+            <li>Filter ID: {{ filter.filter_id }}, User ID: {{ filter.user_id }}, Filter Settings: {{ filter.filter_settings }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Awards</h1>
+    <ul>
+        {% for award in awards %}
+            <li>Award ID: {{ award.award_id }}, Icon ID: {{ award.icon_id }}, Name: {{ award.name }}, Description: {{ award.description }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
